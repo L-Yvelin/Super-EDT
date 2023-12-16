@@ -1,0 +1,64 @@
+@keyframes blink {
+    0% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes hello {
+    from {
+        scale: 1;
+        filter: drop-shadow(0 0);
+    }
+
+    50% {
+        scale: 2;
+        filter: drop-shadow(0 0 .5vh gold);
+    }
+
+    to {
+        scale: 1.2;
+        filter: drop-shadow(0 0 .25vh gold);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes realtime {
+    0% {
+        opacity: .5;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+
+@font-face {
+    font-family: 'led_counter-7';
+    src: url('led_counter-7.ttf') format('truetype');
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EDT</title>
+    <link rel="icon" href="images/palmier.png">
+
+    <link rel="stylesheet" href="css/style.css?v=22">
+    <link rel="stylesheet" href="css/animation.css?v=6">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body onclick=""> <!-- IOS to remove focus on elements (otherwise does nothing) -->
+    <div id="background"></div>
+    <div id="background-sticker"></div>
+    <div id="status-connexion" title="">
+        <div id="off-connexion"></div>
+        <div id="led-connexion">
+            <div id="nb-utilisateurs"></div>
+        </div>
+    </div>
+    <div id="custom-tooltip"></div>
+    <div id="titre"><span title="huh?" id="surtom">S</span>emaine <span id="numero-semaine">—</span></div>
+
+    <div id="zone-bouton">
+        <div id="horaires-tram" title="Clignote: information en direct">
+            <img id="tram-wagons" src="images/trams/tram1.png" alt="tram">
+            <div id="logo-tram"></div>
+            <div id="minutes-tram">
+                <div id="MEETT">MEETT</div>
+                <div id="PDJ">PDJ</div>
+                <div id="MEETT-horaires">— —— —</div>
+                <div id="PDJ-horaires">— —— —</div>
+            </div>
+        </div>
+        <div id="clockContainer">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+        <div id="updateButton" class="cliquable">Actualiser</br><span id="derniere-actualisation">——</span>
+            <div class="loader">
+                <div class="icone-loader"></div>
+            </div>
+        </div>
+        <div id="choisirGroupe" class="cliquable">
+            Groupe</br>
+            <span id="groupe-selectionne">INFO3-2</span>
+            <div id="departements"></div>
+        </div>
+    </div>
+
+    <main id="main"></main>
+
+    <div id="formulaire-groupe">
+        <div id="fermer-groupe">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+                <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="10" />
+                <line x1="10" y1="90" x2="90" y2="10" stroke="white" stroke-width="10" />
+            </svg>
+        </div>
+        <form>
+            <label for="departement">Département:</label>
+            <select id="departement" name="departement"></select>
+            <br><br>
+
+            <label for="annee">Année:</label>
+            <select id="annee" name="annee"></select>
+            <br><br>
+
+            <label for="groupe">Groupe TD:</label>
+            <select id="groupe" name="groupe"></select>
+            <br><br>
+
+            <label for="sousgroupe">Groupe TP:</label>
+            <select id="sousgroupe" name="sousgroupe"></select>
+            <br><br>
+
+            <div id="valider-formulaire" onclick="updateGroups()">Valider</div>
+        </form>
+    </div>
+    <script src="js/js.cookie.min.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/main.js?v=12"></script>
+</body>
+
+</html>
